@@ -1,0 +1,14 @@
+<table ng-init="predicate='id'">
+    <tr>
+        <th><a href='' ng-click="predicate='id'">Id</a></th>
+        <th><a href='' ng-click="predicate='name'">Name</a></th>
+        <th><a href='' ng-click="predicate='email'">Email</a></th>
+        <th><a href='' ng-click="predicate='-averageGrade'">Average Grade</a></th>
+    </tr>
+    <tr ng-repeat="student in students | orderBy:predicate">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.averageGrade || '-'}}</td>
+    </tr>
+</table>
